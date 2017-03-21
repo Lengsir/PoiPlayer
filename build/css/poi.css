@@ -1,9 +1,21 @@
-﻿@charset "utf-8";
+@charset "utf-8";
 /* 
  * Poi Player
  * Design by Louie ( http://i94.me )
  * Last updated 2016-10-27
+ *
+ *branch by lengsir
+ *another color for play bar
+ *update at 2017-3-21
 */
+.poi-play-bar,
+.poi-play-bar div, 
+.poi-play-bar li,
+#poi-music-list div,
+#poi-music-list li,
+#poi-music-list form {
+    box-sizing: border-box;
+}
 .poi-play-bar h1,
 .poi-play-bar h2,
 .poi-play-bar h3,
@@ -18,12 +30,12 @@
     font-weight:normal;
 }
 .poi-play-bar .enable{
-    color: #FE9600 !important;
+    color: #2700fe !important;
 }
 .poi-play-bar i{
     cursor: pointer;
     width: 30px;
-    font-size: 14px;
+    font-size: 16px;
 }
 #open-poi-player{
     width: 30px;
@@ -32,12 +44,12 @@
     position: absolute;
     right: 0;
     bottom: 0;
-    color: #ddd;
+    color: #cedb19;
     text-align: center;
-    background-color: #222;
+    background-color: rgb(99, 171, 63);
 }
 #open-poi-player i{
-    font-size: 28px;
+    font-size: 18px;
     vertical-align: middle;
 }
 
@@ -49,8 +61,8 @@
     width: 30px;
     height: 50px;
     margin: 0 auto;
-    background-color: #333;/*#2c343f*/
-    box-shadow: 0px 0px 1px #111;
+    background-color: #87b331;/*#2c343f*/
+    box-shadow: 0px 0px 1px rgba(117, 247, 211, 0.85);
     z-index: 9999999;
     overflow: hidden;
     -webkit-transition: all 0.4s ease;
@@ -67,12 +79,12 @@
     height: 50px;
     line-height: 50px;
     font-size: 16px;
-    color: #ddd;
+    color: #e1e716;
 }
 .poi-control .rewind i,
 .poi-control .poiplay i,
 .poi-control .fastforward i{
-    font-size: 19px;
+    font-size: 20px;
     vertical-align: middle;
 }
 .poi-play-bar .poi-control{
@@ -88,7 +100,7 @@
     padding: 0 10px;
     vertical-align: top;
     position: relative;
-    /*background: rgba(0,0,0,.5);*/
+    /*background: rgba(3, 169, 244, 0.68);*/
     z-index: 0;
 }
 .poi-progress .poi-sider{
@@ -108,10 +120,10 @@
     cursor: pointer;
 }
 .poi-progress .poi-loaded{
-    background: rgba(255,255,255,.05);
+    background: rgba(255, 255, 255, 0.14);
 }
 .poi-progress .poi-pace{
-    background: #ffffff;
+    background: #FF5722;
     height: 50px;
     opacity: .09;
 }
@@ -121,15 +133,15 @@
     margin-left:-2.5px;
     width:10px;
     height:10px;
-    background:#fff;
+    background:#3F51B5;
     opacity:0;
     transition:opacity .3s;
     -ms-border-radius:50%;
     display: none;
 }
 .poi-progress .poi-song-title{
-    font-size: 14px;
-    color: #eee;
+    font-size: 18px;
+    color: #f6f6f7;
     z-index: 2;
     overflow: hidden;
     white-space: nowrap;
@@ -153,11 +165,11 @@
     bottom: 49px;
     margin: 0 auto;
     width: 100%;
-    background-color: #333;
-    box-shadow: 0px 0px 3px #111;
+    background-color: rgb(73, 97, 27);
+    box-shadow: 0px 0px 3px #ce2020;
     /*border-radius: 5px 5px 0 0;*/
     overflow: hidden;
-    color: #ddd;
+    color: #1fc9da;
     z-index: 999999;
     font-family: PingFang SC,Hiragino Sans GB,Microsoft YaHei,STHeiti,WenQuanYi Micro Hei,Helvetica,Arial,sans-serif;
     -webkit-transition: all 0.4s ease;
@@ -186,18 +198,19 @@
     line-height: 38px;
     text-align: left;
     font-size: 14px;
-    box-shadow: 0 0 1px #111;
-    background-color: #333;
+    box-shadow: 0 0 1px #2a9292;
+    background-color: #5a7b19;
     display: inherit;
     z-index: 999999;
     overflow: hidden;
+    box-sizing: border-box;
 }
 .poi-list-title .poi-list-close{
     font-size: 24px;
     float: right;
     line-height: 0;
     padding: 0 4px 0 9px;
-    margin-top: 7px;
+    margin-top: 17px;
     cursor: pointer;
     display: none;
 }
@@ -210,23 +223,23 @@
 .poi-list-title form.searchide{
     display: none;
 }
-.poi-list-title form .fa-search{
-    position: relative;
+.poi-list-title form i{
+    position: absolute;
     font-size: 20px;
-    margin-left: -30px;
-    color: #ddd;
+    color: #e9ec15;
     z-index: 0;
     cursor: pointer;
+    right: 10px;
 }
 .poi-list-title form input{
     width: 0;
     font-size: 13px;
-    color: #ddd;
+    color: #4CAF50;
     padding: 4px 16px;
     outline: none;
     border-radius: 50px;
-    border: 1px solid #333;
-    background-color: #333;
+    border: 1px solid #4CAF50;
+    background-color: #87b331;
     z-index: 1;
     font-family: PingFang SC,Hiragino Sans GB,Microsoft YaHei,STHeiti,WenQuanYi Micro Hei,Helvetica,Arial,sans-serif;
     -webkit-transition: all 0.4s ease;
@@ -236,14 +249,14 @@
     transition: all 0.4s ease;
 }
 .poi-list-title form input:focus{
-    color: #ddd;
+    color: #f5ebeb;
     width: 260px;
-    border: 1px solid #444;
-    background-color: #444;
+    border: 1px solid #4CAF50;
+    background-color: #8BC34A;
     padding: 4px 30px 4px 16px;
 }
 #poi-music-list #poi-playlist .playing{
-    color: #FE9600;
+    color: #fea400;
 }
 
 #poi-music-list #poi-playlist{
@@ -266,7 +279,7 @@
     width: 290px;
 }
 #poi-music-list #poi-playlist li:hover{
-    background-color: #222;
+    background-color: #7f36f4;
 }
 
 #poi-music-list #poi-lrc{
@@ -282,8 +295,9 @@
     height: 246px;
     max-width: 246px;
     padding: 15px;
-    background-color: #333;
-    box-shadow: inset 0 0 6px #111;
+    background-color: rgba(251, 237, 76, 0.29);
+    box-shadow: inset 0 0 6px #ded023;
+    box-sizing: border-box;
     -webkit-transition: all 0.6s ease;
     -moz-transition: all 0.6s ease;
     -ms-transition: all 0.6s ease;
@@ -330,11 +344,16 @@
     -webkit-animation: degs 30s infinite linear;
 }
 
+#poi-music-list #poi-playlist ul::-webkit-scrollbar {
+    width: 5px !important;
+    height: 5px !important;
+    background-color: #eee !important;
+}
 #poi-music-list #poi-playlist ul::-webkit-scrollbar-thumb {
-    background-color: #222;
+    background-color: #4d9456 !important;
 }
 #poi-music-list #poi-playlist ul::-webkit-scrollbar-track {
-    background-color: #444;
+    background-color: #4f6b2f !important;
 }
 
 
@@ -346,8 +365,8 @@
     width: 100%;
     height: 100%;
     margin: 0 auto;
-    background-color: rgba(44, 52, 63, 0);
-    color: #ddd;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #14d81a;
     z-index: -2;
     display: none;
 }
@@ -356,7 +375,7 @@
     margin-top: 24px;
     background: none;
     border:0;
-    color: #ddd;
+    color: #22f188;
 }
 #lrcWrap li{
     font-size: 14px;
@@ -426,7 +445,7 @@
     display: table-cell;
     vertical-align: top;
     font-size: 15px;
-    border: 1px solid #999;
+    border: 1px solid #ad7575;
     text-shadow:none;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -448,7 +467,7 @@
     margin-left: 15px;
 }
 .poi-search-box #button:hover{
-    background-color: #E67474;
+    background-color: #e07171;
     border-color: #E67474;
     color: #fff;
 }
@@ -464,7 +483,7 @@
     padding: 5px 0;
     line-height: 1em;
     box-sizing: border-box;
-    color: rgba(0,0,0,.6);
+    color: rgba(142, 125, 125, 0.6);
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
     border-radius: 3px;
     z-index: 0;
@@ -479,6 +498,10 @@
     font-size: 12px;
     line-height: 20px;
 }
+a#try-listen-play {
+    text-decoration:none;
+    color: #c3790e;
+}
 #list-music-song ul li{
     padding: 6px 0 0;
     overflow:hidden;
@@ -487,7 +510,8 @@
     white-space:nowrap;
     max-width:550px;
 }
-#list-music-song .fa{
+#list-music-song ul li i{
+    font-size: 14px;
     padding-right: 5px;
 }
 .list-song-info-title{
@@ -500,9 +524,6 @@
     font-size: 22px;
     text-shadow: rgba(225, 225, 225, 1) 0px 0px 5px;
 }
-#list-music-song .try-listen .fa-stop-circle{
-    color: #000;
-}
 .list-music-cover .song-cd-cover{
     float: left;
     width: 120px;
@@ -512,8 +533,8 @@
     background-repeat: no-repeat;
     background-position: 50%;
     background-color: #ffffff;
-    box-shadow: 0 0 13px #000;
-    border-right: 5px solid #222;
+    box-shadow: 0 0 13px #37d0ac;
+    border-right: 5px solid rgba(117, 247, 211, 0.85);
     z-index: 2;
 }
 .list-music-cover .song-cd-pan {
@@ -532,3 +553,60 @@
 .poi-search-help p{
     font-size: 12px;
 }
+
+@font-face {font-family: "poifont";
+  src: url('../fonts/iconfont.eot?t=1481545557376'); /* IE9*/
+  src: url('../fonts/iconfont.eot?t=1481545557376#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../fonts/iconfont.woff?t=1481545557376') format('woff'), /* chrome, firefox */
+  url('../fonts/iconfont.ttf?t=1481545557376') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('../fonts/iconfont.svg?t=1481545557376#poifont') format('svg'); /* iOS 4.1- */
+}
+
+.poifont {
+  font-family:"poifont" !important;
+  font-size:20px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.poi-sousuochaxun:before { content: "\e600"; }
+
+.poi-shuaxin:before { content: "\e612"; }
+
+.poi-guanlianfujian:before { content: "\e601"; }
+
+.poi-chuangkoufangda:before { content: "\e610"; }
+
+.poi-tupian:before { content: "\e602"; }
+
+.poi-shipin:before { content: "\e603"; }
+
+.poi-huhuan:before { content: "\e604"; }
+
+.poi-shengyin:before { content: "\e605"; }
+
+.poi-jingyin:before { content: "\e606"; }
+
+.poi-fanhui2:before { content: "\e607"; }
+
+.poi-jinru2:before { content: "\e608"; }
+
+.poi-daohangliebiao:before { content: "\e609"; }
+
+.poi-shouqi:before { content: "\e60a"; }
+
+.poi-zhankai:before { content: "\e60b"; }
+
+.poi-bofang:before { content: "\e60c"; }
+
+.poi-zanting:before { content: "\e60d"; }
+
+.poi-tingzhi:before { content: "\e611"; }
+
+.poi-shangyishou:before { content: "\e60e"; }
+
+.poi-kuaijin:before { content: "\e60f"; }
+
+
